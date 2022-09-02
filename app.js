@@ -26,11 +26,11 @@ const FILE_PATH='example.txt'
 
 const server = http.createServer(async (req, res) => {
 	try{
-	let parsedURL = url.parse(req.url, true);
-	let path = parsedURL.pathname;
-	const query=parsedURL.query;
-	const method= req.method
-	routes(path,method,query,{},req,res)
+		let parsedURL = url.parse(req.url, true);
+		let path = parsedURL.pathname;
+		const query=parsedURL.query;
+		const method= req.method
+		routes(path,method,query,{},req,res)
 	}catch(er){
 		console.log("parsing error", er.message)
 		res.writeHead(SERVER_ERROR_CODE, RESPONSE_HEADER);

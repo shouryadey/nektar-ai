@@ -33,12 +33,10 @@ const routes=(path,method,query,body,req,res, )=>{
 			.pipe(res).on('error',logError)
 
 			res.on('finish',()=>{
-				// console.log('Destroying readable stream')
 				readableStream.destroy();
 			})
 
 
-			// console.log(process.memoryUsage().rss/1024/1024,process.memoryUsage().heapTotal/1024/1024,process.memoryUsage().heapUsed/1024/1024,process.memoryUsage().external/1024/1024 )
 		}catch(ex){
 			console.log(ex.message)
 			res.writeHead(SERVER_ERROR_CODE,RESPONSE_HEADER);
@@ -50,7 +48,6 @@ const routes=(path,method,query,body,req,res, )=>{
 		res.writeHead(NOT_FOUND_EROR_CODE, RESPONSE_HEADER);
 		res.end(JSON.stringify({ message: ROUTE_NOT_FOUND_ERROR_MESSAGE}));
 	}
-	path=null,method=null,query=null,body=null,req=null,res=null
 	callGarbageCollector();
 }
 
