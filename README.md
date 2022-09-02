@@ -1,10 +1,10 @@
 ## APPROACH:
-Markup : * Exposed API:"/api/getLogsInTimeRange" with two query params-> timeStart and timeEnd (ISO String format, preferably).
+* Exposed API:"/api/getLogsInTimeRange" with two query params-> timeStart and timeEnd (ISO String format, preferably).
 
-Markup : * The idea is to use binary search in the logs (using sorted order of timestring) to get the approximate start and end positions in the file 'example.tx'.
+ * The idea is to use binary search in the logs (using sorted order of timestring) to get the approximate start and end positions in the file 'example.tx'.
 Used streams module to make sure the file does not needed to be loaded in main memory.
 
-Markup : * Using transfrom streams to:
+ * Using transfrom streams to:
  1. convert file text to new lines
  2. filter logs (few logs will be extra after step 1 as approximate position has been found)
  3. Convert each lines to string
