@@ -1,0 +1,12 @@
+const NOT_FOUND_EROR_CODE=404
+const SERVER_ERROR_CODE=500
+const ROUTE_NOT_FOUND_ERROR_MESSAGE= "Route not found" ;
+const PROCESSING_ERROR_MESSAGE="Processing error, please check input"
+const PARSING_EEROR_MESSAGE="Parsing error, please check input"
+module.exports={
+	NOT_FOUND_EROR_CODE, 
+	ROUTE_NOT_FOUND_ERROR_MESSAGE,
+	SERVER_ERROR_CODE,
+	PROCESSING_ERROR_MESSAGE,
+	PARSING_EEROR_MESSAGE
+}
