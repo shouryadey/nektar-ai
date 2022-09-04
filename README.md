@@ -14,7 +14,7 @@ Used streams module to make sure the file does not needed to be loaded in main m
 
  #### Using transfrom streams to:
  - Convert file text to new lines
- - Filter logs (few logs will be extra after step 1 as approximate position has been found)
+ - Filter logs (few logs will be extra after step 1 as approximate position has been used)
  - Convert each lines to string
  - Writing in response writable stream
 
